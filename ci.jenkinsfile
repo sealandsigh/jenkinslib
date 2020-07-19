@@ -1,0 +1,14 @@
+pipeline{
+    agnet { node {label "master"}}
+
+    stages {
+        stage {
+            script{
+                
+            mvnhome = tool "m2"
+            sh "${mvnhome}/bin/mvn -v"
+ 
+            }
+        }
+    }
+}
